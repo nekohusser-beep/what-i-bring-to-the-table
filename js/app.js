@@ -70,6 +70,7 @@
     search: '',
     wakeLock: null,
     firstRunDone: false,
+    firstSeen: null,
   };
 
   const $ = (sel, el = document) => el.querySelector(sel);
@@ -104,6 +105,7 @@
       (Array.isArray(raw.avoid) ? raw.avoid : []).forEach((id) => state.avoid.add(id));
       state.filters = Object.assign(state.filters, raw.filters && typeof raw.filters === 'object' ? raw.filters : {});
       state.firstRunDone = !!raw.firstRunDone;
+      state.firstSeen = (typeof raw.firstSeen === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw.firstSeen)) ? raw.firstSeen : null;
       if (migratedFrom) {
         // Persist under the new key immediately so users keep pantry/favorites after upgrade.
         saveState();
@@ -112,7 +114,7 @@
       // ignore corrupt storage; keep empty defaults
     }
   }
-  function saveState() {
+  function saveState(silent) {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
         pantry: [...state.pantry],
@@ -122,18 +124,30 @@
         avoid: [...state.avoid],
         filters: state.filters,
         firstRunDone: state.firstRunDone,
+        firstSeen: state.firstSeen,
       }));
       // Clear legacy keys after a successful write so state does not diverge.
       for (const key of LEGACY_STORAGE_KEYS) {
         try { localStorage.removeItem(key); } catch (_) {}
       }
     } catch (_) {
-      toast('Could not save on this phone. You can keep cooking; changes may not stick.');
+      if (!silent) toast('Could not save on this phone. You can keep cooking; changes may not stick.');
     }
+  }
+
+  // Founding-family stamp: the first date this phone opened the app, kept on the phone only.
+  // Nothing is sent anywhere. Later, anyone stamped on or before the cutoff keeps every extra free.
+  function stampFirstSeen() {
+    if (state.firstSeen) return;
+    const d = new Date();
+    const pad = (n) => String(n).padStart(2, '0');
+    state.firstSeen = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+    saveState(true);
   }
 
   async function boot() {
     loadState();
+    stampFirstSeen();
     let recipesPack, chips, starter;
     try {
       const [r1, r2, r3] = await Promise.all([

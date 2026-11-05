@@ -1,4 +1,4 @@
-const CACHE = 'wibt-v12';
+const CACHE = 'wibt-v12-1';
 const ASSETS = [
   './',
   './index.html',
@@ -122,7 +122,7 @@ const ASSETS = [
   './privacy.html'
 ];
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', (e) => {
   e.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
