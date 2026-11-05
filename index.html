@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#c62828" />
+  <meta name="description" content="What I Bring to the Table — dinners from what's already home, with nutrition you can trust." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="What I Bring" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-startup-image" href="icons/splash.png" />
+  <title>What I Bring to the Table</title>
+  <link rel="preload" href="fonts/nunito-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <h1>What I Bring to the Table</h1>
+        <div class="tag">Meals from what's home</div>
+      </div>
+    </header>
+
+    <section class="screen active" data-screen="home">
+      <div class="greeting">
+        <h2>What's for dinner tonight?</h2>
+        <p>Tap what you have — then let's find something yum. Simple enough for a kid helper.</p>
+      </div>
+      <div class="pantry-tools">
+        <button type="button" class="icon-btn" id="btn-starter">Start with a basic pantry</button>
+        <button type="button" class="icon-btn" id="btn-clear-pantry">Clear</button>
+        <span id="pantry-count"></span>
+      </div>
+      <input class="search" id="chip-search" type="search" placeholder="Search ingredients…" autocomplete="off" />
+      <div class="chips" id="chips" aria-label="Pantry ingredients"></div>
+      <button type="button" class="cta" id="btn-dinner">What's for dinner?</button>
+      <button type="button" class="secondary" id="btn-advanced">Advanced</button>
+      <footer class="footer">
+        Cord of Three Strands LLC<br />
+        <a href="privacy.html">Privacy</a> · <a href="credits.html">Credits</a><br />
+        Nutrition estimates from USDA FoodData Central — not medical advice.
+      </footer>
+    </section>
+
+    <section class="screen" data-screen="results">
+      <div class="backrow">
+        <button type="button" class="icon-btn" id="btn-back-home">← Pantry</button>
+        <strong>Yum picks for you</strong>
+      </div>
+      <div class="cards" id="results-cards"></div>
+      <footer class="footer">Cord of Three Strands LLC</footer>
+    </section>
+
+    <section class="screen" data-screen="cook">
+      <div class="backrow">
+        <button type="button" class="icon-btn" id="btn-back-results">← Results</button>
+        <button type="button" class="heart" id="btn-fav-cook">♡ Save</button>
+        <button type="button" class="icon-btn" id="btn-add-plan">+ Week</button>
+      </div>
+      <div class="cook">
+        <div id="cook-hero" class="cook-hero" hidden></div>
+        <h2 id="cook-title"></h2>
+        <div class="meta" id="cook-meta"></div>
+        <div id="cook-contains"></div>
+        <div id="cook-temp"></div>
+        <h3>Ingredients</h3>
+        <ul class="ing-list" id="cook-ings"></ul>
+        <h3>Let's cook!</h3>
+        <ol class="steps" id="cook-steps"></ol>
+        <p class="disclaimer">Cook mode keeps your screen awake when your phone allows it.</p>
+      </div>
+      <footer class="footer">Cord of Three Strands LLC</footer>
+    </section>
+
+    <section class="screen" data-screen="advanced">
+      <div class="backrow">
+        <button type="button" class="icon-btn" id="btn-back-adv">← Home</button>
+        <strong>Advanced</strong>
+      </div>
+      <div class="advanced" id="advanced"></div>
+      <footer class="footer">
+        Cord of Three Strands LLC · <a href="privacy.html">Privacy</a> · <a href="credits.html">Credits</a><br />
+        Nutrition estimates from USDA FoodData Central — not medical advice.
+      </footer>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/match.js"></script>
+  <script src="js/nutrition.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

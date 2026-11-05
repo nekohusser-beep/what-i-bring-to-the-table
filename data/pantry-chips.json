@@ -1,0 +1,507 @@
+[
+  {
+    "id": "almonds",
+    "name": "Almonds",
+    "cat": "pantry"
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "cat": "produce"
+  },
+  {
+    "id": "avocado",
+    "name": "Avocado",
+    "cat": "veg"
+  },
+  {
+    "id": "bacon",
+    "name": "Bacon",
+    "cat": "protein"
+  },
+  {
+    "id": "banana",
+    "name": "Banana",
+    "cat": "produce"
+  },
+  {
+    "id": "basil",
+    "name": "Basil",
+    "cat": "spice"
+  },
+  {
+    "id": "bbq-sauce",
+    "name": "BBQ sauce",
+    "cat": "pantry"
+  },
+  {
+    "id": "broth-beef",
+    "name": "Beef broth",
+    "cat": "pantry"
+  },
+  {
+    "id": "bell-pepper",
+    "name": "Bell pepper",
+    "cat": "veg"
+  },
+  {
+    "id": "black-beans",
+    "name": "Black beans",
+    "cat": "protein"
+  },
+  {
+    "id": "black-pepper",
+    "name": "Black pepper",
+    "cat": "spice"
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "cat": "grain"
+  },
+  {
+    "id": "breadcrumbs",
+    "name": "Breadcrumbs",
+    "cat": "pantry"
+  },
+  {
+    "id": "broccoli",
+    "name": "Broccoli",
+    "cat": "veg"
+  },
+  {
+    "id": "brown-sugar",
+    "name": "Brown sugar",
+    "cat": "pantry"
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "cat": "dairy"
+  },
+  {
+    "id": "cabbage",
+    "name": "Cabbage",
+    "cat": "veg"
+  },
+  {
+    "id": "beans-canned",
+    "name": "Canned beans",
+    "cat": "protein"
+  },
+  {
+    "id": "canned-tomatoes",
+    "name": "Canned tomatoes",
+    "cat": "veg"
+  },
+  {
+    "id": "tuna-canned",
+    "name": "Canned tuna",
+    "cat": "protein"
+  },
+  {
+    "id": "carrot",
+    "name": "Carrot",
+    "cat": "veg"
+  },
+  {
+    "id": "celery",
+    "name": "Celery",
+    "cat": "veg"
+  },
+  {
+    "id": "cheddar",
+    "name": "Cheddar cheese",
+    "cat": "dairy"
+  },
+  {
+    "id": "chicken-breast",
+    "name": "Chicken breast",
+    "cat": "protein"
+  },
+  {
+    "id": "broth-chicken",
+    "name": "Chicken broth",
+    "cat": "pantry"
+  },
+  {
+    "id": "chicken-thighs",
+    "name": "Chicken thighs",
+    "cat": "protein"
+  },
+  {
+    "id": "chickpeas",
+    "name": "Chickpeas",
+    "cat": "protein"
+  },
+  {
+    "id": "chili-powder",
+    "name": "Chili powder",
+    "cat": "spice"
+  },
+  {
+    "id": "coconut-milk",
+    "name": "Coconut milk",
+    "cat": "pantry"
+  },
+  {
+    "id": "cabbage-slaw",
+    "name": "Coleslaw mix",
+    "cat": "veg"
+  },
+  {
+    "id": "corn",
+    "name": "Corn",
+    "cat": "veg"
+  },
+  {
+    "id": "cornstarch",
+    "name": "Cornstarch",
+    "cat": "pantry"
+  },
+  {
+    "id": "cream-cheese",
+    "name": "Cream cheese",
+    "cat": "dairy"
+  },
+  {
+    "id": "cucumber",
+    "name": "Cucumber",
+    "cat": "veg"
+  },
+  {
+    "id": "cumin",
+    "name": "Cumin",
+    "cat": "spice"
+  },
+  {
+    "id": "eggs",
+    "name": "Eggs",
+    "cat": "protein"
+  },
+  {
+    "id": "flour",
+    "name": "Flour",
+    "cat": "pantry"
+  },
+  {
+    "id": "frozen-mixed-veg",
+    "name": "Frozen mixed vegetables",
+    "cat": "veg"
+  },
+  {
+    "id": "frozen-peas",
+    "name": "Frozen peas",
+    "cat": "veg"
+  },
+  {
+    "id": "garlic",
+    "name": "Garlic",
+    "cat": "veg"
+  },
+  {
+    "id": "ginger",
+    "name": "Ginger",
+    "cat": "spice"
+  },
+  {
+    "id": "green-beans",
+    "name": "Green beans",
+    "cat": "veg"
+  },
+  {
+    "id": "green-onion",
+    "name": "Green onion",
+    "cat": "veg"
+  },
+  {
+    "id": "ground-beef",
+    "name": "Ground beef",
+    "cat": "protein"
+  },
+  {
+    "id": "ground-turkey",
+    "name": "Ground turkey",
+    "cat": "protein"
+  },
+  {
+    "id": "ham",
+    "name": "Ham",
+    "cat": "protein"
+  },
+  {
+    "id": "cream",
+    "name": "Heavy cream",
+    "cat": "dairy"
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "cat": "pantry"
+  },
+  {
+    "id": "jalapeno",
+    "name": "Jalape\u00f1o",
+    "cat": "veg"
+  },
+  {
+    "id": "ketchup",
+    "name": "Ketchup",
+    "cat": "pantry"
+  },
+  {
+    "id": "lasagna-noodles",
+    "name": "Lasagna noodles",
+    "cat": "grain"
+  },
+  {
+    "id": "lemon",
+    "name": "Lemon",
+    "cat": "produce"
+  },
+  {
+    "id": "lentils",
+    "name": "Lentils",
+    "cat": "protein"
+  },
+  {
+    "id": "lettuce",
+    "name": "Lettuce",
+    "cat": "veg"
+  },
+  {
+    "id": "lime",
+    "name": "Lime",
+    "cat": "produce"
+  },
+  {
+    "id": "mayo",
+    "name": "Mayonnaise",
+    "cat": "pantry"
+  },
+  {
+    "id": "milk",
+    "name": "Milk",
+    "cat": "dairy"
+  },
+  {
+    "id": "mozzarella",
+    "name": "Mozzarella",
+    "cat": "dairy"
+  },
+  {
+    "id": "mushroom",
+    "name": "Mushrooms",
+    "cat": "veg"
+  },
+  {
+    "id": "mustard",
+    "name": "Mustard",
+    "cat": "pantry"
+  },
+  {
+    "id": "oats",
+    "name": "Oats",
+    "cat": "grain"
+  },
+  {
+    "id": "olive-oil",
+    "name": "Olive oil",
+    "cat": "pantry"
+  },
+  {
+    "id": "onion",
+    "name": "Onion",
+    "cat": "veg"
+  },
+  {
+    "id": "oregano",
+    "name": "Oregano",
+    "cat": "spice"
+  },
+  {
+    "id": "paprika",
+    "name": "Paprika",
+    "cat": "spice"
+  },
+  {
+    "id": "parmesan",
+    "name": "Parmesan",
+    "cat": "dairy"
+  },
+  {
+    "id": "pasta",
+    "name": "Pasta",
+    "cat": "grain"
+  },
+  {
+    "id": "pasta-sauce",
+    "name": "Pasta sauce",
+    "cat": "pantry"
+  },
+  {
+    "id": "peanut-butter",
+    "name": "Peanut butter",
+    "cat": "pantry"
+  },
+  {
+    "id": "pinto-beans",
+    "name": "Pinto beans",
+    "cat": "protein"
+  },
+  {
+    "id": "pizza-dough",
+    "name": "Pizza dough",
+    "cat": "grain"
+  },
+  {
+    "id": "pork-chops",
+    "name": "Pork chops",
+    "cat": "protein"
+  },
+  {
+    "id": "potatoes",
+    "name": "Potatoes",
+    "cat": "veg"
+  },
+  {
+    "id": "quinoa",
+    "name": "Quinoa",
+    "cat": "grain"
+  },
+  {
+    "id": "ramen-noodles",
+    "name": "Ramen noodles",
+    "cat": "grain"
+  },
+  {
+    "id": "rice",
+    "name": "Rice",
+    "cat": "grain"
+  },
+  {
+    "id": "ricotta",
+    "name": "Ricotta",
+    "cat": "dairy"
+  },
+  {
+    "id": "rotisserie-chicken",
+    "name": "Rotisserie chicken",
+    "cat": "protein"
+  },
+  {
+    "id": "salmon",
+    "name": "Salmon",
+    "cat": "protein"
+  },
+  {
+    "id": "salsa",
+    "name": "Salsa",
+    "cat": "pantry"
+  },
+  {
+    "id": "salt",
+    "name": "Salt",
+    "cat": "spice"
+  },
+  {
+    "id": "sausage",
+    "name": "Sausage",
+    "cat": "protein"
+  },
+  {
+    "id": "sesame-oil",
+    "name": "Sesame oil",
+    "cat": "pantry"
+  },
+  {
+    "id": "sesame-seeds",
+    "name": "Sesame seeds",
+    "cat": "pantry"
+  },
+  {
+    "id": "shrimp",
+    "name": "Shrimp",
+    "cat": "protein"
+  },
+  {
+    "id": "sour-cream",
+    "name": "Sour cream",
+    "cat": "dairy"
+  },
+  {
+    "id": "soy-sauce",
+    "name": "Soy sauce",
+    "cat": "pantry"
+  },
+  {
+    "id": "spaghetti",
+    "name": "Spaghetti",
+    "cat": "grain"
+  },
+  {
+    "id": "spinach",
+    "name": "Spinach",
+    "cat": "veg"
+  },
+  {
+    "id": "sweet-potato",
+    "name": "Sweet potato",
+    "cat": "veg"
+  },
+  {
+    "id": "tofu",
+    "name": "Tofu",
+    "cat": "protein"
+  },
+  {
+    "id": "tomato",
+    "name": "Tomato",
+    "cat": "veg"
+  },
+  {
+    "id": "tomato-paste",
+    "name": "Tomato paste",
+    "cat": "pantry"
+  },
+  {
+    "id": "tomato-sauce",
+    "name": "Tomato sauce",
+    "cat": "pantry"
+  },
+  {
+    "id": "tortillas",
+    "name": "Tortillas",
+    "cat": "grain"
+  },
+  {
+    "id": "vegetable-oil",
+    "name": "Vegetable oil",
+    "cat": "pantry"
+  },
+  {
+    "id": "walnuts",
+    "name": "Walnuts",
+    "cat": "pantry"
+  },
+  {
+    "id": "worcestershire",
+    "name": "Worcestershire",
+    "cat": "pantry"
+  },
+  {
+    "id": "yogurt",
+    "name": "Yogurt",
+    "cat": "dairy"
+  },
+  {
+    "id": "zucchini",
+    "name": "Zucchini",
+    "cat": "veg"
+  },
+  {
+    "id": "hummus",
+    "name": "Hummus",
+    "cat": "pantry"
+  }
+]
