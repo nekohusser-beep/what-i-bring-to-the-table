@@ -1,4 +1,4 @@
-const CACHE = 'wibt-v12-1';
+const CACHE = 'wibt-v12-2';
 const ASSETS = [
   './',
   './index.html',
@@ -121,19 +121,29 @@ const ASSETS = [
   './manifest.json',
   './privacy.html'
 ];
+// Install: fetch every file straight from the origin (a throwaway query string skips any
+// CDN/HTTP cache copy of the old version) and store it under its normal address.
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
+  e.waitUntil(
+    caches.open(CACHE).then((c) => Promise.all(ASSETS.map((u) => {
+      const bust = u + (u.indexOf('?') === -1 ? '?' : '&') + 'sw=' + CACHE;
+      return fetch(bust, { cache: 'reload' }).then((res) => {
+        if (!res.ok) throw new Error('install fetch failed: ' + u);
+        return c.put(u, res);
+      });
+    }))).then(() => self.skipWaiting())
+  );
 });
 self.addEventListener('activate', (e) => {
   e.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
 });
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
+  // Read only from the current version's cache so an older cache can never answer.
   e.respondWith(
-    caches.match(e.request).then((cached) => cached || fetch(e.request).then((res) => {
-      const copy = res.clone();
-      caches.open(CACHE).then((c) => c.put(e.request, copy));
+    caches.open(CACHE).then((c) => c.match(e.request).then((cached) => cached || fetch(e.request).then((res) => {
+      if (res.ok) c.put(e.request, res.clone());
       return res;
-    }).catch(() => cached))
+    }).catch(() => cached)))
   );
 });
